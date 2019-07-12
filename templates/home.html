@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}Boogle Board{% endblock %}
+
+{% block content %}
+
+<table>
+
+{% for row in board %}
+<tr>
+    {% for char in row %}
+        <td>{{char}}
+        </td>
+    {% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<form id="form" method = "GET"> 
+    <input id="input-word"  type="text"> 
+    <button>Enter</button>
+ </form>
+
+ <p id="response"> </p>
+
+{% endblock %}
